@@ -14,7 +14,6 @@ export default function MovieForm(props) {
       return alert("Podaj tytuł filmu");
     }
 
-    // 👇 komunikacja dziecko -> rodzic (App)
     props.onMovieSubmit({ title: trimmedTitle, year: trimmedYear });
 
     setTitle("");

@@ -12,7 +12,6 @@ export default function App() {
   ]);
 
   function handleMovieSubmit(movie) {
-    // ✅ nadal etap 09 w środku: nie mutujemy tablicy
     setMovies([...movies, movie]);
   }
 
