@@ -14,7 +14,10 @@ export default function MovieForm(props) {
       return alert("Podaj tytuł filmu");
     }
 
-    props.onMovieSubmit({ title: trimmedTitle, year: trimmedYear });
+    props.onMovieSubmit({
+      title: trimmedTitle,
+      year: trimmedYear,
+    });
 
     setTitle("");
     setYear("");

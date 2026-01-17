@@ -11,17 +11,32 @@ export default function App() {
     { title: "1670", year: "2023" },
   ]);
 
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
   function handleMovieSubmit(movie) {
     setMovies([...movies, movie]);
+    setIsFormVisible(false); // wygodnie: po dodaniu chowamy formularz
+  }
+
+  function handleMovieRemove(indexToRemove) {
+    setMovies(movies.filter((_, index) => index !== indexToRemove));
   }
 
   return (
     <div className="container">
       <h1>My favourite movies to watch</h1>
 
-      <MoviesList movies={movies} />
+      <button onClick={() => setIsFormVisible(!isFormVisible)}>
+        {isFormVisible ? "Ukryj formularz" : "Dodaj film"}
+      </button>
 
-      <MovieForm onMovieSubmit={handleMovieSubmit} />
+      {movies.length === 0 ? (
+        <p>Brak filmów. Kliknij „Dodaj film”, aby dodać pierwszy.</p>
+      ) : (
+        <MoviesList movies={movies} onMovieRemove={handleMovieRemove} />
+      )}
+
+      {isFormVisible && <MovieForm onMovieSubmit={handleMovieSubmit} />}
     </div>
   );
 }
