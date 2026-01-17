@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-lab41/static/css/main.afc54b13.css",
+    "main.js": "/react-lab41/static/js/main.6bab2013.js",
+    "static/js/453.07a360c5.chunk.js": "/react-lab41/static/js/453.07a360c5.chunk.js",
+    "index.html": "/react-lab41/index.html",
+    "main.afc54b13.css.map": "/react-lab41/static/css/main.afc54b13.css.map",
+    "main.6bab2013.js.map": "/react-lab41/static/js/main.6bab2013.js.map",
+    "453.07a360c5.chunk.js.map": "/react-lab41/static/js/453.07a360c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afc54b13.css",
+    "static/js/main.6bab2013.js"
+  ]
+}
